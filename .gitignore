@@ -1,0 +1,5 @@
+/tests/.pytest_cache/
+/tests/geckodriver.log
+/.pytest_cache/
+/chromedriver.exe
+/geckodriver.log
