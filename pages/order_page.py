@@ -1,4 +1,3 @@
-import time
 import allure
 
 from selenium import webdriver
@@ -33,11 +32,8 @@ class InputDate(OrederButton):
     def input_metro(self, metro):
         metro_field = self.find_element(OrderLocators.LOCATOR_ORDER_METRO_SELECTOR)
         metro_field.send_keys(metro)
-        time.sleep(1)
         metro_field.send_keys(Keys.DOWN)
-        time.sleep(1)
         metro_field.send_keys(Keys.ENTER)
-        time.sleep(1)
         return metro_field
 
     @allure.step('Ввод тел. номера')
@@ -57,7 +53,6 @@ class InputDate(OrederButton):
     def input_tame(self, tame):
         tame_field = self.find_element(OrderLocators.LOCATOR_ORDER_TAME_FILD)
         tame_field.click()
-        time.sleep(1)
         tame_field = self.find_element(tame)
         tame_field.click()
         return tame_field

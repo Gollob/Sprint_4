@@ -1,5 +1,4 @@
 import allure
-import time
 
 from locators.locator_main_page import MainLocators
 from pages.main_page import TestQuestion
@@ -12,7 +11,6 @@ class TestLogo:
         ya.go_to_site()
         ya.click_rcc_button()
         ya.locator_clicks(MainLocators.LOCATOR_YA_LOGO)
-        time.sleep(1)
         browser.switch_to.window(browser.window_handles[1])
         assert browser.current_url == 'https://dzen.ru/?yredirect=true'
 
@@ -24,7 +22,6 @@ class TestLogo:
         scooter.click_rcc_button()
         scooter.locator_clicks(MainLocators.LOCATOR_MAIN_HEADER_ORDER_BUTTON)
         scooter.locator_clicks(MainLocators.LOCATOR_SCOOTER_LOGO)
-        time.sleep(1)
         assert browser.current_url == 'https://qa-scooter.praktikum-services.ru/'
 
 
